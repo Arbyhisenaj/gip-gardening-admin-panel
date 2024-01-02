@@ -8,7 +8,7 @@ import {
   Text
 } from '@tremor/react';
 
-import Customer from "./interface/interface";
+import Customer from "../interface/interface";
 
 
 export default function CustomersTable({ users }: { users: Customer[] }) {

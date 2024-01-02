@@ -1,10 +1,13 @@
 export default interface Customer {
-    id: number;
-    name: string;
-    postcode: string;
-    email: string;
-    message: string;
-    phone: string;
-    recieved: string;
+  id: string;
+  email: string;
+  name: string;
+  phone: string;
+  postcode: string;
+  message: string;
+  contacted: boolean;
+  createdAt: Date;
+  received: boolean;
+
 
   }

@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import Map, {Marker} from 'react-map-gl';
-import marker from './assets/marker.svg'
+import marker from '../assets/marker.svg'
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 
@@ -42,7 +42,7 @@ const CustomerMapbox: React.FC<CustomerMapboxProps> = ({ postcode }) => {
 
   return (
     <>
-    <div className='-m-[1.5rem] rounded-r-lg overflow-hidden'>
+    <div className='-m-[1.5rem] md:rounded-r-lg  md:h-auto rounded-b-lg h-80'>
       {mapboxData && mapboxData.features.length > 0 && (
         <Map
           mapboxAccessToken={mapboxtoken}
