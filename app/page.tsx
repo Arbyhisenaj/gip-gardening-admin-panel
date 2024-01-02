@@ -19,6 +19,7 @@ export default async function IndexPage({
         createdAt: 'desc',
       }
     ],
+    take: 10,
     where: {
       OR: [
         {
