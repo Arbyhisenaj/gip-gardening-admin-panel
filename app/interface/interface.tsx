@@ -5,4 +5,6 @@ export default interface Customer {
     email: string;
     message: string;
     phone: string;
+    recieved: string;
+
   }

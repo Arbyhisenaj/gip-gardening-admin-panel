@@ -1,10 +1,10 @@
-import User from "./interface/interface";
+import Customer from "./interface/interface";
 import { Card, Button } from "@tremor/react";
 import CustomerMapbox from "./customer-mapbox";
 
 
 
-export default function UsersList({ users }: { users: User[] }) {
+export default function UsersList({ users }: { users: Customer[] }) {
 
     return (
         <div className="">
