@@ -39,10 +39,11 @@ export default async function IndexPage({
       <Title>Gip Gardening Leads</Title>
       <Text>A list of leads that submitted the contact form on your website.</Text>
       <Search />
+    {/* 
       <UsersList users={users} />
       <Card className="mt-6">
         <CustomersTable users={users} />
-      </Card>
+      </Card> */}
     </main>
   );
 }
