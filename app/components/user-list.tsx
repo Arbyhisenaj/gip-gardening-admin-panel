@@ -15,7 +15,11 @@ export default function UsersList({ users }: { users: Customer[] }) {
     };
 
     const handleTextClick = (phone: string) => {
-        window.location.href = `sms:${phone}`;
+        // Format the phone number (remove non-numeric characters)
+        const formattedPhone = phone.replace(/\D/g, '');
+    
+        // Open WhatsApp with the formatted phone number
+        window.location.href = `https://wa.me/${formattedPhone}`;
     };
 
     const handleDirectionsClick = (postcode: string) => {
@@ -34,14 +38,18 @@ export default function UsersList({ users }: { users: Customer[] }) {
                                     <p className="text-b text-neutral-400 text-sm uppercase">Name</p>
                                     <p className="text-2xl font-extrabold uppercase">{user.name}</p>
                                 </div>
-                                <div className="mb-4">
-                                    <p className="text-b text-neutral-400 text-sm uppercase">Postcode</p>
-                                    <p className="text-xl uppercase mb-2">{user.postcode || "-"}</p>
-                                    <Button variant="secondary" size="xs" onClick={() => handleDirectionsClick(user.postcode)}>Directions</Button>
+                                <div className="mb-4 flex gap-3 align-middle">
+                                    <div>
+                                        <p className="text-b text-neutral-400 text-sm uppercase">Postcode</p>
+                                        <p className="text-xl uppercase mb-2">{user.postcode || "-"}</p>
+                                    </div>
+                                    <div className="mt-2">
+                                        <Button variant="secondary" size="xs" onClick={() => handleDirectionsClick(user.postcode)} className="">Directions</Button>
+                                    </div>
                                 </div>
                                 <div className="mb-4">
                                     <p className="text-b text-neutral-400 text-sm uppercase">Email</p>
-                                    <p className="text-xl">{user.email}</p>
+                                    <p className="text-xl break-all	">{user.email}</p>
                                 </div>
                                 <div className="mb-4">
                                     <p className="text-b text-neutral-400 text-sm uppercase">Phone</p>
@@ -60,7 +68,9 @@ export default function UsersList({ users }: { users: Customer[] }) {
                                 <Button variant="secondary" onClick={() => handlePhoneClick(user.phone)}>
                                     Phone
                                 </Button>
-                                <Button variant="secondary" onClick={() => handleTextClick(user.phone)}>Text</Button>
+                                <Button variant="secondary" onClick={() => handleTextClick(user.phone)}>
+                                    WhatsApp
+                                </Button>
                                 <Switch />
                             </div>
                             <div className="text-sm uppercase mt-8 text-neutral-400">

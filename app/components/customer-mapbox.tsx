@@ -52,6 +52,8 @@ const CustomerMapbox: React.FC<CustomerMapboxProps> = ({ postcode }) => {
             zoom: 14,
           }}
           mapStyle="mapbox://styles/mapbox/streets-v9"
+          cooperativeGestures={true}
+          
         >
           <Marker longitude={mapboxData.features[0].center[0]} latitude={mapboxData.features[0].center[1]} anchor="bottom">
             <img src={marker.src} alt="Marker" />
