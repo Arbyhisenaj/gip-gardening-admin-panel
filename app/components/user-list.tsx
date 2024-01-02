@@ -26,8 +26,8 @@ export default function UsersList({ users }: { users: Customer[] }) {
     return (
         <div className="">
             {users.map((user) => (
-                <Card className="mt-6">
-                    <div key={user.id} className="grid md:grid-cols-2 grid-cols-1 gap-12">
+                <Card key={user.id} className="mt-6">
+                    <div className="grid md:grid-cols-2 grid-cols-1 gap-12">
                         <div>
                             <div className="md:grid md:grid-cols-2 flex-row gap-6 ">
                                 <div className="mb-4">
@@ -38,7 +38,6 @@ export default function UsersList({ users }: { users: Customer[] }) {
                                     <p className="text-b text-neutral-400 text-sm uppercase">Postcode</p>
                                     <p className="text-xl uppercase mb-2">{user.postcode || "-"}</p>
                                     <Button variant="secondary" size="xs" onClick={() => handleDirectionsClick(user.postcode)}>Directions</Button>
-
                                 </div>
                                 <div className="mb-4">
                                     <p className="text-b text-neutral-400 text-sm uppercase">Email</p>
@@ -55,7 +54,6 @@ export default function UsersList({ users }: { users: Customer[] }) {
                                 </div>
                             </div>
                             <div className="flex gap-2">
-
                                 <Button variant="secondary" onClick={() => handleEmailClick(user.email)}>
                                     Email
                                 </Button>
