@@ -32,18 +32,18 @@ export default async function IndexPage({
     },
 
   }) as Customer[];
-    ;
+
 
   return (
     <main className="p-4 md:p-10 mx-auto max-w-7xl">
       <Title>Gip Gardening Leads</Title>
       <Text>A list of leads that submitted the contact form on your website.</Text>
       <Search />
-    {/* 
+    
       <UsersList users={users} />
       <Card className="mt-6">
         <CustomersTable users={users} />
-      </Card> */}
+      </Card> 
     </main>
   );
 }

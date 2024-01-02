@@ -1,9 +1,10 @@
 import './globals.css';
-
 import { Analytics } from '@vercel/analytics/react';
 import Nav from './components/nav';
 import Toast from './components/toast';
 import { Suspense } from 'react';
+import { UserProvider } from '@auth0/nextjs-auth0/client'
+
 
 export const metadata = {
   title: 'GG-dashboard',

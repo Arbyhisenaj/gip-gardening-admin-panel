@@ -6,9 +6,9 @@
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint"
-    
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^3.5.0",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@prisma/client": "^5.7.1",
