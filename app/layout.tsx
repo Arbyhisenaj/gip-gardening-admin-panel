@@ -17,14 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full bg-gray-50">
+    <html lang="en" className="h-full bg-[#453D3B09]">
       <body className="h-full">
         <Suspense>
           <Nav />
         </Suspense>
         {children}
         <Analytics />
-        <Toast />
       </body>
     </html>
   );

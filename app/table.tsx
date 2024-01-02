@@ -8,17 +8,19 @@ import {
   Text
 } from '@tremor/react';
 
-import User from "./interface/interface";
+import Customer from "./interface/interface";
 
 
-export default function UsersTable({ users }: { users: User[] }) {
+export default function CustomersTable({ users }: { users: Customer[] }) {
   return (
     <Table>
       <TableHead>
         <TableRow>
           <TableHeaderCell>Name</TableHeaderCell>
-          <TableHeaderCell>Username</TableHeaderCell>
+          <TableHeaderCell>Postcode</TableHeaderCell>
           <TableHeaderCell>Email</TableHeaderCell>
+          <TableHeaderCell>Message</TableHeaderCell>
+
         </TableRow>
       </TableHead>
       <TableBody>
@@ -26,10 +28,13 @@ export default function UsersTable({ users }: { users: User[] }) {
           <TableRow key={user.id}>
             <TableCell>{user.name}</TableCell>
             <TableCell>
-              <Text>{user.username}</Text>
+              <Text>{user.postcode}</Text>
             </TableCell>
             <TableCell>
               <Text>{user.email}</Text>
+            </TableCell>
+            <TableCell>
+              <Text>{user.message}</Text>
             </TableCell>
           </TableRow>
         ))}
